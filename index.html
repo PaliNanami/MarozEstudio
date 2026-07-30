@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>MAROZ Estudio | Diseño Estratégico para Negocios Reales</title>
+    <meta name="title" content="MAROZ Estudio | Diseño Estratégico para Negocios Reales">
+    <meta name="description" content="Diseño estratégico comercial en Santiago, Chile. Unimos arquitectura, branding y UX espacial para transformar tu local físico en tu mejor canal de ventas.">
+    <meta name="keywords" content="Arquitectura comercial, Branding, UX espacial, Diseño de tiendas, Retail design, Santiago Chile, MAROZ Estudio, Interiorismo comercial">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://marozestudio.cl/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://marozestudio.cl/">
+    <meta property="og:title" content="MAROZ Estudio | Diseño Estratégico para Negocios Reales">
+    <meta property="og:description" content="Diseño estratégico comercial en Santiago, Chile. Unimos arquitectura, branding y UX espacial para transformar tu local físico en tu mejor canal de ventas.">
+    <meta property="og:image" content="https://marozestudio.cl/assets/store-interior.jpg">
+    <meta property="og:locale" content="es_CL">
+    <meta property="og:site_name" content="MAROZ Estudio">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://marozestudio.cl/">
+    <meta property="twitter:title" content="MAROZ Estudio | Diseño Estratégico para Negocios Reales">
+    <meta property="twitter:description" content="Diseño estratégico comercial en Santiago, Chile. Unimos arquitectura, branding y UX espacial para transformar tu local físico en tu mejor canal de ventas.">
+    <meta property="twitter:image" content="https://marozestudio.cl/assets/store-interior.jpg">
+
+    <!-- Fonts preconnect and load -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            white: '#FFFFFF',
+                            cream: '#F5F4F0',
+                            charcoal: '#1A1A1A',
+                            'charcoal-light': '#2A2A2A',
+                            'charcoal-muted': '#8E8E8E',
+                            turquoise: '#02D4D5',
+                            'turquoise-hover': '#00BEBF',
+                            'turquoise-light': 'rgba(2, 212, 213, 0.08)',
+                            'turquoise-border': 'rgba(2, 212, 213, 0.2)',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        header: ['Poppins', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    boxShadow: {
+                        soft: '0 4px 30px rgba(0, 0, 0, 0.02)',
+                        card: '0 10px 40px rgba(0, 0, 0, 0.04)',
+                        hover: '0 20px 50px rgba(2, 212, 213, 0.08)',
+                    },
+                    borderRadius: {
+                        brand: '8px',
+                        'brand-lg': '16px',
+                    },
+                    transitionProperty: {
+                        smooth: 'all',
+                    },
+                    transitionTimingFunction: {
+                        smooth: 'cubic-bezier(0.4, 0, 0.2, 1)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS styles layers and utilities inside Tailwind compiler -->
+    <style type="text/tailwindcss">
+        @layer base {
+            html {
+                @apply scroll-smooth antialiased;
+                font-size: 16px;
+            }
+            body {
+                @apply font-sans bg-white text-brand-charcoal leading-relaxed overflow-x-hidden;
+            }
+            h1, h2, h3, h4, h5, h6 {
+                @apply font-header text-brand-charcoal font-bold tracking-tight leading-snug;
+            }
+        }
+        @layer components {
+            .btn {
+                @apply inline-flex items-center justify-center font-header font-semibold text-[0.9rem] px-7 py-3.5 rounded-brand cursor-pointer transition-all duration-300 ease-smooth border-none outline-none tracking-wider;
+            }
+            .btn-primary {
+                @apply bg-brand-turquoise text-white shadow-[0_4px_15px_rgba(2,212,213,0.2)] hover:bg-brand-turquoise-hover hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(2,212,213,0.3)];
+            }
+            .btn-secondary {
+                @apply bg-brand-charcoal text-white hover:bg-black hover:-translate-y-0.5;
+            }
+            .btn-outline {
+                @apply bg-transparent text-brand-turquoise border-2 border-brand-turquoise hover:bg-brand-turquoise hover:text-white;
+            }
+            .btn-sm {
+                @apply px-5 py-2.5 text-[0.8rem];
+            }
+        }
+    </style>
+
+    <!-- External stylesheet for reveals and manual scroll behaviors -->
+    <link rel="stylesheet" href="styles.css?v=2.0">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "MAROZ Estudio",
+      "image": "https://marozestudio.cl/assets/store-interior.jpg",
+      "@id": "https://marozestudio.cl/#organization",
+      "url": "https://marozestudio.cl",
+      "telephone": "+569XXXXXXXX",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Santiago",
+        "addressLocality": "Santiago",
+        "addressRegion": "Metropolitana",
+        "postalCode": "8320000",
+        "addressCountry": "CL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.4489,
+        "longitude": -70.6693
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "priceRange": "$$",
+      "sameAs": [
+        "https://www.instagram.com/maroz.estudio",
+        "https://www.linkedin.com/company/maroz-estudio"
+      ],
+      "description": "Diseño estratégico comercial que une arquitectura, branding y experiencia espacial para negocios reales y rentables en Santiago, Chile."
+    }
+    </script>
+</head>
+<body class="overflow-hidden">
+    <!-- ==========================================================================
+         SPLASH SCREEN / PRELOADER
+         ========================================================================== -->
+    <div id="splash-screen" aria-hidden="true">
+        <div class="splash-content">
+            <div class="splash-logo-container">
+                <img src="assets/logo.svg" alt="MAROZ Estudio Logo" class="splash-logo">
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Premium Cursor Elements -->
+    <div id="custom-cursor-dot" class="fixed top-0 left-0 w-2 h-2 bg-brand-charcoal rounded-full pointer-events-none z-[9999] opacity-0 transition-opacity duration-300 transform -translate-x-1/2 -translate-y-1/2 hidden lg:block"></div>
+    <div id="custom-cursor-ring" class="fixed top-0 left-0 w-8 h-8 border-2 border-brand-charcoal/20 rounded-full pointer-events-none z-[9998] opacity-0 transition-opacity duration-300 transform -translate-x-1/2 -translate-y-1/2 hidden lg:block"></div>
+
+    <!-- ==========================================================================
+         NAVIGATION BAR
+         ========================================================================== -->
+    <header class="navbar fixed top-0 left-0 w-full z-50 bg-white/95 border-b border-black/5 backdrop-blur-md transition-all duration-300 py-5" id="home">
+        <nav class="max-w-[1200px] mx-auto px-6 flex items-center justify-between" aria-label="Navegación Principal">
+            <a href="#hero" class="flex items-center gap-3 group" aria-label="MAROZ Estudio - Ir al inicio">
+                <img src="assets/logo.svg" alt="MAROZ Estudio Logo" class="h-24 md:h-[110px] w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+            </a>
+
+            <ul class="nav-links flex flex-col md:flex-row items-center justify-center md:justify-start gap-10 md:gap-8 list-none fixed md:static top-20 md:top-auto -left-full md:left-auto w-full md:w-auto h-[calc(100vh-80px)] md:h-auto bg-white md:bg-transparent pb-20 md:pb-0 transition-all duration-300 ease-smooth z-40" id="nav-menu">
+                <li><a href="#que-hacemos" class="font-header font-semibold text-[0.85rem] text-brand-charcoal tracking-widest uppercase relative py-2 transition-colors duration-300 hover:text-brand-turquoise after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-turquoise after:transition-all after:duration-300 hover:after:w-full" aria-label="Qué hacemos">Qué hacemos</a></li>
+                <li><a href="#proceso" class="font-header font-semibold text-[0.85rem] text-brand-charcoal tracking-widest uppercase relative py-2 transition-colors duration-300 hover:text-brand-turquoise after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-turquoise after:transition-all after:duration-300 hover:after:w-full" aria-label="El Proceso">Proceso</a></li>
+                <li><a href="#colecciones" class="font-header font-semibold text-[0.85rem] text-brand-charcoal tracking-widest uppercase relative py-2 transition-colors duration-300 hover:text-brand-turquoise after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-turquoise after:transition-all after:duration-300 hover:after:w-full" aria-label="Colecciones">Colecciones</a></li>
+                <li><a href="#servicios-especializados" class="font-header font-semibold text-[0.85rem] text-brand-charcoal tracking-widest uppercase relative py-2 transition-colors duration-300 hover:text-brand-turquoise after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-turquoise after:transition-all after:duration-300 hover:after:w-full" aria-label="Servicios">Servicios</a></li>
+                <li><a href="#quienes-somos" class="font-header font-semibold text-[0.85rem] text-brand-charcoal tracking-widest uppercase relative py-2 transition-colors duration-300 hover:text-brand-turquoise after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-turquoise after:transition-all after:duration-300 hover:after:w-full" aria-label="Quiénes somos">Quiénes somos</a></li>
+                <li><a href="#contacto" class="font-header font-semibold text-[0.85rem] text-brand-charcoal tracking-widest uppercase relative py-2 transition-colors duration-300 hover:text-brand-turquoise after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-turquoise after:transition-all after:duration-300 hover:after:w-full" aria-label="Contacto">Contacto</a></li>
+            </ul>
+
+            <div class="nav-cta hidden md:block">
+                <a href="#seccion-agendamiento" class="btn btn-primary btn-sm" aria-label="Agendar un Diagnóstico Inicial">Agendar Diagnóstico</a>
+            </div>
+
+            <button class="menu-toggle md:hidden flex flex-col justify-between w-6 h-[18px] cursor-pointer bg-transparent border-0 p-0 focus:outline-none z-50 group" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+                <span class="block w-full h-[2px] bg-brand-charcoal transition-all duration-300 ease-smooth origin-left"></span>
+                <span class="block w-full h-[2px] bg-brand-charcoal transition-all duration-300 ease-smooth"></span>
+                <span class="block w-full h-[2px] bg-brand-charcoal transition-all duration-300 ease-smooth origin-left"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ==========================================================================
+             HERO SECTION
+             ========================================================================== -->
+        <section id="hero" class="bg-white pt-36 pb-20 md:pb-24 overflow-hidden">
+            <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-center">
+                <div class="max-w-[620px] reveal">
+                    <span class="inline-block text-[0.9rem] sm:text-[1rem] lg:text-[1.22rem] font-bold tracking-[0.23em] text-brand-turquoise mb-5 font-header">ARQUITECTURA + BRANDING + INTERIORISMO</span>
+                    <h1 class="text-3xl sm:text-4xl lg:text-[3.2rem] lg:leading-[1.2] font-extrabold mb-6 text-brand-charcoal hero-title">
+                        <span class="word-span">Diseñamos</span>
+                        <span class="word-span">espacios</span> <br class="hidden sm:inline">
+                        <span class="word-span">que</span>
+                        <span class="word-span">hacen</span> <span class="relative inline-block word-span-special">
+                            <span class="font-serif italic text-brand-turquoise font-medium pr-1.5">crecer</span>
+                            <svg class="absolute -bottom-1.5 left-0 w-full h-[6px] text-brand-turquoise/80" viewBox="0 0 100 10" preserveAspectRatio="none">
+                                <path d="M0,5 Q50,9 100,3" stroke="currentColor" stroke-width="3.5" fill="none" stroke-linecap="round" class="path-underline"/>
+                            </svg>
+                        </span> <br class="hidden sm:inline">
+                        <span class="word-span">tu</span>
+                        <span class="word-span">negocio.</span>
+                    </h1>
+                    <p class="text-base md:text-[1.05rem] text-brand-charcoal-muted mb-9 leading-relaxed">Diseño estratégico para negocios, desde la Arquitectura hasta la Presencia digital</p>
+                    
+                    <div class="grid grid-cols-2 gap-x-6 gap-y-4 mb-10">
+                        <div class="flex items-center gap-3 font-header font-semibold text-[0.85rem] text-brand-charcoal tracking-wide uppercase">
+                            <div class="flex items-center justify-center w-[22px] h-[22px] bg-brand-turquoise/8 rounded-full text-brand-turquoise shrink-0"><i data-lucide="check" class="w-3.5 h-3.5"></i></div>
+                            <span>Arquitectura Comercial</span>
+                        </div>
+                        <div class="flex items-center gap-3 font-header font-semibold text-[0.85rem] text-brand-charcoal tracking-wide uppercase">
+                            <div class="flex items-center justify-center w-[22px] h-[22px] bg-brand-turquoise/8 rounded-full text-brand-turquoise shrink-0"><i data-lucide="check" class="w-3.5 h-3.5"></i></div>
+                            <span>Muebles Corporativos</span>
+                        </div>
+                        <div class="flex items-center gap-3 font-header font-semibold text-[0.85rem] text-brand-charcoal tracking-wide uppercase">
+                            <div class="flex items-center justify-center w-[22px] h-[22px] bg-brand-turquoise/8 rounded-full text-brand-turquoise shrink-0"><i data-lucide="check" class="w-3.5 h-3.5"></i></div>
+                            <span>Diseño Interior</span>
+                        </div>
+                        <div class="flex items-center gap-3 font-header font-semibold text-[0.85rem] text-brand-charcoal tracking-wide uppercase">
+                            <div class="flex items-center justify-center w-[22px] h-[22px] bg-brand-turquoise/8 rounded-full text-brand-turquoise shrink-0"><i data-lucide="check" class="w-3.5 h-3.5"></i></div>
+                            <span>Diseño de Experiencias Comerciales</span>
+                        </div>
+                        <div class="flex items-center gap-3 font-header font-semibold text-[0.85rem] text-brand-charcoal tracking-wide uppercase">
+                            <div class="flex items-center justify-center w-[22px] h-[22px] bg-brand-turquoise/8 rounded-full text-brand-turquoise shrink-0"><i data-lucide="check" class="w-3.5 h-3.5"></i></div>
+                            <span>Plan de Acción para tu Comercio</span>
+                        </div>
+                        <div class="flex items-center gap-3 font-header font-semibold text-[0.85rem] text-brand-charcoal tracking-wide uppercase">
+                            <div class="flex items-center justify-center w-[22px] h-[22px] bg-brand-turquoise/8 rounded-full text-brand-turquoise shrink-0"><i data-lucide="check" class="w-3.5 h-3.5"></i></div>
+                            <span>Muebles a Medida</span>
+                        </div>
+                        <div class="flex items-center gap-3 font-header font-semibold text-[0.85rem] text-brand-charcoal tracking-wide uppercase col-span-2 md:col-span-1">
+                            <div class="flex items-center justify-center w-[22px] h-[22px] bg-brand-turquoise/8 rounded-full text-brand-turquoise shrink-0"><i data-lucide="check" class="w-3.5 h-3.5"></i></div>
+                            <span>Letrería Comercial Iluminada (Lightbox)</span>
+                        </div></div>
+
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-5">
+                        <a href="#seccion-agendamiento" class="btn btn-primary" aria-label="Agendar Plan de Acción">
+                            <i data-lucide="calendar" class="mr-2 w-[18px] h-[18px]"></i>
+                            Quiero mi Plan de Acción
+                        </a>
+                        <a href="#colecciones" class="btn btn-outline" aria-label="Ver Colecciones de MAROZ">Ver Colecciones</a>
+                    </div>
+                </div>
+
+                <div class="relative h-[480px] lg:h-[550px] w-full max-w-[600px] lg:max-w-none mx-auto reveal delay-200">
+                    <!-- High-tech Carousel Slideshow -->
+                    <div class="w-full h-full rounded-brand-lg overflow-hidden shadow-card relative bg-brand-charcoal" id="hero-carousel">
+
+
+                        <!-- Slide 1 (Active) -->
+                        <div class="carousel-slide absolute inset-0 opacity-100 scale-100 z-10" data-project="01: VERDI Coffee Tea Shop - Salón">
+                            <img src="assets/verdi-wide-interior.jpg" alt="Diseño de salón interior de VERDI Coffee Tea Shop por MAROZ Estudio" class="w-full h-full object-cover object-center">
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="carousel-slide absolute inset-0 opacity-0 scale-95 z-0" data-project="02: VERDI Coffee Tea Shop - Barra">
+                            <img src="assets/verdi-counter.jpg" alt="Diseño de barra y mostrador de VERDI Coffee Tea Shop por MAROZ Estudio" class="w-full h-full object-cover" style="object-position: center bottom !important;">
+                            <span class="absolute top-4 left-4 bg-brand-charcoal/80 text-white backdrop-blur-sm text-[0.65rem] font-medium px-3 py-1 rounded-full z-30 tracking-wider border border-white/15">Colaboración con Valka Estudio</span>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="carousel-slide absolute inset-0 opacity-0 scale-95 z-0" data-project="03: VERDI Coffee Tea Shop - Closet Sale">
+                            <img src="assets/verdi-closet-sale.jpg" alt="Closet Sale en VERDI Coffee Tea Shop por MAROZ Estudio" class="w-full h-full object-cover object-center">
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="carousel-slide absolute inset-0 opacity-0 scale-95 z-0" data-project="04: VERDI Coffee Tea Shop - Montaje">
+                            <img src="assets/verdi-event-table.jpg" alt="Decoración de evento y mesa en VERDI Coffee Tea Shop por MAROZ Estudio" class="w-full h-full object-cover object-center">
+                        </div>
+                        <!-- Slide 5 -->
+                        <div class="carousel-slide absolute inset-0 opacity-0 scale-95 z-0" data-project="05: VERDI Coffee Tea Shop - Fachada">
+                            <img src="assets/storefront.jpg" alt="Fachada exterior de VERDI Coffee Tea Shop por MAROZ Estudio" class="w-full h-full object-cover object-center">
+                        </div>
+                        <!-- Slide 6 -->
+                        <div class="carousel-slide absolute inset-0 opacity-0 scale-95 z-0" data-project="06: Tiendas de ropa">
+                            <img src="assets/tienda-luces.png" alt="Diseño lúdico y creativo de tienda de luces diseñado por MAROZ Estudio" class="w-full h-full object-cover object-center">
+                        </div>
+                        <!-- Slide 7 -->
+                        <div class="carousel-slide absolute inset-0 opacity-0 scale-95 z-0" data-project="07: Panadería">
+                            <img src="assets/panaderia-diseno.png" alt="Diseño de panadería de especialidad con diseño estratégico de MAROZ Estudio" class="w-full h-full object-cover object-center">
+                        </div>
+                        <!-- Slide 8 -->
+                        <div class="carousel-slide absolute inset-0 opacity-0 scale-95 z-0" data-project="08: VERDI Coffee Tea Shop - Detalles">
+                            <img src="assets/verdi-3.jpg" alt="Fachada y letrero de VERDI Coffee Tea Shop por MAROZ Estudio" class="w-full h-full object-cover object-center">
+                        </div>
+
+                        <!-- Technical Grid Overlay (visual only to emphasize technology/differentiation) -->
+                        <div class="absolute inset-0 pointer-events-none border border-brand-turquoise/10 z-20 bg-[linear-gradient(to_right,rgba(2,212,213,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(2,212,213,0.02)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+                        
+                        <!-- Navigation dots at the bottom of the image -->
+                        <div class="absolute bottom-5 right-5 z-30 flex gap-2">
+                            <button class="carousel-dot w-2 h-2 rounded-full bg-white/40 transition-all duration-300" aria-label="Slide 1"></button>
+                            <button class="carousel-dot w-2 h-2 rounded-full bg-white/40 transition-all duration-300" aria-label="Slide 2"></button>
+                            <button class="carousel-dot w-2 h-2 rounded-full bg-white/40 transition-all duration-300" aria-label="Slide 3"></button>
+                            <button class="carousel-dot w-2 h-2 rounded-full bg-white/40 transition-all duration-300" aria-label="Slide 4"></button>
+                            <button class="carousel-dot w-2 h-2 rounded-full bg-white/40 transition-all duration-300" aria-label="Slide 5"></button>
+                            <button class="carousel-dot w-2 h-2 rounded-full bg-white/40 transition-all duration-300" aria-label="Slide 6"></button>
+                            <button class="carousel-dot w-2 h-2 rounded-full bg-white/40 transition-all duration-300" aria-label="Slide 7"></button>
+                            <button class="carousel-dot w-2 h-2 rounded-full bg-white/40 transition-all duration-300" aria-label="Slide 8"></button>
+                        </div>
+                    </div>
+                                        <!-- Overlay Quote Card -->
+                    <div class="absolute -bottom-[20px] -left-4 lg:-left-8 bg-brand-charcoal text-white p-3 lg:p-4 rounded-brand max-w-[220px] lg:max-w-[240px] shadow-[0_15px_30px_rgba(0,0,0,0.15)] border-l-[3px] border-brand-turquoise z-30">
+                        <p class="font-header font-medium text-[0.7rem] lg:text-[0.75rem] leading-snug mb-1 italic">"No diseñamos locales bonitos. Diseñamos comercios que funcionan."</p>
+                        <span class="text-[0.55rem] lg:text-[0.6rem] text-brand-turquoise font-bold tracking-widest uppercase">— MAROZ ESTUDIO</span>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             ¿QUÉ PROBLEMAS RESOLVEMOS?
+             ========================================================================== -->
+        <section class="py-20 md:py-24 bg-brand-cream" id="que-hacemos">
+            <div class="max-w-[1200px] mx-auto px-6">
+                <div class="text-center max-w-[700px] mx-auto mb-16 reveal">
+                    <h2 class="text-3xl md:text-[2.25rem] text-brand-charcoal mb-4 font-extrabold">¿Qué resolvemos?</h2>
+                    <p class="text-brand-charcoal-muted text-base md:text-[1rem]">Detectamos los problemas de diseño y distribución que alejan a tus clientes. Diseñamos una estrategia para que tu negocio se vea profesional, funcione sin problemas y destaque en el mercado.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+                    <article class="bg-white rounded-brand p-8 text-center shadow-soft border border-black/[0.02] transition-all duration-300 ease-smooth hover:-translate-y-2 hover:shadow-hover hover:border-brand-turquoise/20 group reveal delay-100">
+                        <div class="w-[60px] h-[60px] bg-brand-turquoise/8 text-brand-turquoise rounded-full flex items-center justify-center mx-auto mb-5 text-xl transition-all duration-300 ease-smooth group-hover:bg-brand-turquoise group-hover:text-white group-hover:scale-110">
+                            <i data-lucide="trending-up" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-header text-[0.9rem] font-bold text-brand-charcoal leading-snug">Atraer más clientes</h3>
+                    </article>
+
+                    <article class="bg-white rounded-brand p-8 text-center shadow-soft border border-black/[0.02] transition-all duration-300 ease-smooth hover:-translate-y-2 hover:shadow-hover hover:border-brand-turquoise/20 group reveal delay-200">
+                        <div class="w-[60px] h-[60px] bg-brand-turquoise/8 text-brand-turquoise rounded-full flex items-center justify-center mx-auto mb-5 text-xl transition-all duration-300 ease-smooth group-hover:bg-brand-turquoise group-hover:text-white group-hover:scale-110">
+                            <i data-lucide="award" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-header text-[0.9rem] font-bold text-brand-charcoal leading-snug">Verte profesional y diferenciarte</h3>
+                    </article>
+
+                    <article class="bg-white rounded-brand p-8 text-center shadow-soft border border-black/[0.02] transition-all duration-300 ease-smooth hover:-translate-y-2 hover:shadow-hover hover:border-brand-turquoise/20 group reveal delay-300">
+                        <div class="w-[60px] h-[60px] bg-brand-turquoise/8 text-brand-turquoise rounded-full flex items-center justify-center mx-auto mb-5 text-xl transition-all duration-300 ease-smooth group-hover:bg-brand-turquoise group-hover:text-white group-hover:scale-110">
+                            <i data-lucide="circle-dollar-sign" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-header text-[0.9rem] font-bold text-brand-charcoal leading-snug">Remodela y haz destacar tu negocio</h3>
+                    </article>
+
+                    <article class="bg-white rounded-brand p-8 text-center shadow-soft border border-black/[0.02] transition-all duration-300 ease-smooth hover:-translate-y-2 hover:shadow-hover hover:border-brand-turquoise/20 group reveal delay-400">
+                        <div class="w-[60px] h-[60px] bg-brand-turquoise/8 text-brand-turquoise rounded-full flex items-center justify-center mx-auto mb-5 text-xl transition-all duration-300 ease-smooth group-hover:bg-brand-turquoise group-hover:text-white group-hover:scale-110">
+                            <i data-lucide="users" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-header text-[0.9rem] font-bold text-brand-charcoal leading-snug">Mejorar la experiencia de tus clientes</h3>
+                    </article>
+
+                    <article class="bg-white rounded-brand p-8 text-center shadow-soft border border-black/[0.02] transition-all duration-300 ease-smooth hover:-translate-y-2 hover:shadow-hover hover:border-brand-turquoise/20 group reveal delay-500">
+                        <div class="w-[60px] h-[60px] bg-brand-turquoise/8 text-brand-turquoise rounded-full flex items-center justify-center mx-auto mb-5 text-xl transition-all duration-300 ease-smooth group-hover:bg-brand-turquoise group-hover:text-white group-hover:scale-110">
+                            <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-header text-[0.9rem] font-bold text-brand-charcoal leading-snug">Mejora tu imagen en el mercado</h3>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             CÓMO TRABAJAMOS (Timeline 4 steps)
+             ========================================================================== -->
+        <section class="py-20 md:py-24 bg-white relative overflow-hidden" id="proceso">
+            <div class="max-w-[1200px] mx-auto px-6">
+                <div class="text-center max-w-[700px] mx-auto mb-16 reveal">
+                    <span class="text-brand-turquoise font-header font-semibold uppercase text-[1.7rem] tracking-[0.15em] mb-3 inline-block">El Método MAROZ</span>
+                    <h2 class="text-3xl md:text-[2.25rem] text-brand-charcoal mb-4 font-extrabold">Cómo Trabajamos</h2>
+
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-10 relative mt-10 reveal">
+                    <!-- Dashed Timeline Connection Line (desktop only) -->
+                    <div class="hidden lg:block absolute top-[35px] left-[10%] w-[80%] h-0 border-t-2 border-dashed border-brand-turquoise/20 z-0"></div>
+
+                    <!-- Step 1 -->
+                    <div class="process-step active text-center relative z-10 max-w-[320px] mx-auto lg:max-w-none group cursor-pointer">
+                        <div class="step-badge w-[70px] h-[70px] rounded-full bg-white border-[3px] border-brand-cream text-brand-charcoal-muted font-header font-extrabold text-[1.15rem] flex items-center justify-center mx-auto mb-6 transition-all duration-300 ease-smooth shadow-soft">1</div>
+                        <span class="step-label font-header text-[0.75rem] text-brand-turquoise font-bold tracking-widest uppercase mb-2 block">Paso 01</span>
+                        <h3 class="text-lg font-bold mb-3 text-brand-charcoal">Elige cómo quieres comenzar</h3>
+                        <p class="text-[0.85rem] text-brand-charcoal-muted px-2 leading-relaxed">Elige una <strong class="font-bold text-brand-charcoal">Colección Integral</strong> o una <strong class="font-bold text-brand-charcoal">Solución Especializada</strong>, según las necesidades y el alcance de tu proyecto.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="process-step text-center relative z-10 max-w-[320px] mx-auto lg:max-w-none group cursor-pointer">
+                        <div class="step-badge w-[70px] h-[70px] rounded-full bg-white border-[3px] border-brand-cream text-brand-charcoal-muted font-header font-extrabold text-[1.15rem] flex items-center justify-center mx-auto mb-6 transition-all duration-300 ease-smooth shadow-soft">2</div>
+                        <span class="step-label font-header text-[0.75rem] text-brand-turquoise font-bold tracking-widest uppercase mb-2 block">Paso 02</span>
+                        <h3 class="text-lg font-bold mb-3 text-brand-charcoal">Agenda en Línea</h3>
+                        <p class="text-[0.85rem] text-brand-charcoal-muted px-2 leading-relaxed mb-4">Reserva tu reunión de diagnóstico inicial. Ahí identificamos el estado de tu negocio. El precio es una inversión de $150.000 CLP. (Esto cubre 2 reuniones: Reunión 1 de Diagnóstico y Reunión 2 de Entrega de propuesta).</p>
+                        <a href="#seccion-agendamiento" class="btn btn-primary btn-sm mx-auto mt-2 shadow-soft hover:shadow-hover group">Agendar Diagnóstico <i data-lucide="arrow-right" class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1"></i></a>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="process-step text-center relative z-10 max-w-[320px] mx-auto lg:max-w-none group cursor-pointer">
+                        <div class="step-badge w-[70px] h-[70px] rounded-full bg-white border-[3px] border-brand-cream text-brand-charcoal-muted font-header font-extrabold text-[1.15rem] flex items-center justify-center mx-auto mb-6 transition-all duration-300 ease-smooth shadow-soft">3</div>
+                        <span class="step-label font-header text-[0.75rem] text-brand-turquoise font-bold tracking-widest uppercase mb-2 block">Paso 03</span>
+                        <h3 class="text-lg font-bold mb-3 text-brand-charcoal">Recibe tu Propuesta</h3>
+                        <p class="text-[0.85rem] text-brand-charcoal-muted px-2 leading-relaxed">En la segunda reunión te entregamos los resultados de tu propuesta. Esto es un plan de acción que detalla lo que necesita tu local.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="process-step text-center relative z-10 max-w-[320px] mx-auto lg:max-w-none group cursor-pointer">
+                        <div class="step-badge w-[70px] h-[70px] rounded-full bg-white border-[3px] border-brand-cream text-brand-charcoal-muted font-header font-extrabold text-[1.15rem] flex items-center justify-center mx-auto mb-6 transition-all duration-300 ease-smooth shadow-soft">4</div>
+                        <span class="step-label font-header text-[0.75rem] text-brand-turquoise font-bold tracking-widest uppercase mb-2 block">Paso 04</span>
+                        <h3 class="text-lg font-bold mb-3 text-brand-charcoal">Avanza con Nosotros</h3>
+                        <p class="text-[0.85rem] text-brand-charcoal-muted px-2 leading-relaxed">Si decides avanzar con nosotras, los $150.000 iniciales del diagnóstico, se consideran un abono del total.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             COLECCIONES Y PRECIOS
+             ========================================================================== -->
+        <section class="py-20 md:py-24 bg-brand-cream" id="colecciones">
+            <div class="max-w-[1200px] mx-auto px-6">
+                <div class="text-center max-w-[700px] mx-auto mb-16 reveal">
+                    <span class="text-brand-turquoise font-header font-semibold uppercase text-[0.85rem] tracking-[0.15em] mb-3 inline-block">Nuestras Colecciones</span>
+                    <h2 class="text-3xl md:text-[2.25rem] text-brand-charcoal mb-4 font-extrabold">Colecciones y Precios</h2>
+                    <p class="text-brand-charcoal-muted text-base md:text-[1rem]">Elige según tus metas y presupuesto</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-[500px] lg:max-w-none mx-auto">
+                    <!-- CARD 1 -->
+                    <article class="tilt-card bg-white rounded-brand-lg overflow-hidden shadow-card border border-black/[0.03] flex flex-col transition-all duration-300 ease-smooth hover:shadow-[0_30px_60px_rgba(0,0,0,0.08)] reveal delay-100">
+                        <div class="h-[200px] overflow-hidden relative image-expand-container">
+                            <img src="assets/moodboard.jpg" alt="Moodboard y materiales para el Plan de Acción Comercial MAROZ" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+                        </div>
+                        <div class="p-8 lg:p-10 flex flex-col flex-grow">
+                            <span class="font-header text-[0.75rem] text-white bg-[#FF1493] px-3 py-1 rounded-full font-bold tracking-widest uppercase mb-2 inline-block shadow-sm">COLECCIÓN A</span>
+                            <h3 class="text-[1.35rem] font-extrabold text-brand-charcoal mb-4">Impulsa tu Marca</h3>
+                            <div class="h-[1px] bg-black/5 my-5"></div>
+                            <h4 class="font-header text-[0.8rem] font-bold tracking-wider uppercase text-brand-charcoal mb-4">Qué incluye:</h4>
+                            <ul class="list-none mb-10 flex-grow">
+                                <li class="text-[0.85rem] text-brand-charcoal-light mb-3 flex items-start gap-3 leading-relaxed">
+                                    <i data-lucide="check-circle-2" class="text-brand-turquoise w-4 h-4 mt-0.5 shrink-0" aria-hidden="true"></i>
+                                    <span>Moodboard</span>
+                                </li>
+                                <li class="text-[0.85rem] text-brand-charcoal-light mb-3 flex items-start gap-3 leading-relaxed">
+                                    <i data-lucide="check-circle-2" class="text-brand-turquoise w-4 h-4 mt-0.5 shrink-0" aria-hidden="true"></i>
+                                    <span>Paleta de color y materiales</span>
+                                </li>
+                                <li class="text-[0.85rem] text-brand-charcoal-light mb-3 flex items-start gap-3 leading-relaxed">
+                                    <i data-lucide="check-circle-2" class="text-brand-turquoise w-4 h-4 mt-0.5 shrink-0" aria-hidden="true"></i>
+                                    <span>Mini branding (logo básico + paleta)</span>
+                                </li>
+                                <li class="text-[0.85rem] text-brand-charcoal-light mb-3 flex items-start gap-3 leading-relaxed">
+                                    <i data-lucide="check-circle-2" class="text-brand-turquoise w-4 h-4 mt-0.5 shrink-0" aria-hidden="true"></i>
+                                    <span>Distribución conceptual</span>
+                                </li>
+                                <li class="text-[0.85rem] text-brand-charcoal-light mb-3 flex items-start gap-3 leading-relaxed">
+                                    <i data-lucide="check-circle-2" class="text-brand-turquoise w-4 h-4 mt-0.5 shrink-0" aria-hidden="true"></i>
+                                    <span>Manual visual</span>
+                                </li>
+                                <li class="text-[0.85rem] text-brand-charcoal-light mb-3 flex items-start gap-3 leading-relaxed">
+                                    <i data-lucide="check-circle-2" class="text-brand-turquoise w-4 h-4 mt-0.5 shrink-0" aria-hidden="true"></i>
+                                    <span>Landing page</span>
+                                </li>
+
+                            </ul>
+                            <div class="flex flex-col gap-4 mt-auto">
+                                <div class="mb-2">
+                                    <span class="text-[0.75rem] text-brand-charcoal-muted block mb-0.5">Rango de precio desde</span>
+                                    <div class="font-header text-[1.6rem] font-extrabold text-brand-charcoal">$350.000 - $900.000</div>
+                                </div>
+                                <a href="#seccion-agendamiento" class="btn btn-primary w-full" aria-label="Agendar Plan de Acción Comercial">QUIERO ESTA COLECCIÓN</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- CARD 2 (FEATURED) -->
+                    <article class="tilt-card bg-white rounded-brand-lg overflow-hidden shadow-card border-2 border-brand-turquoise relative flex flex-col transition-all duration-300 ease-smooth hover:shadow-[0_30px_60px_rgba(0,0,0,0.08)] reveal delay-200">
+                        <span class="absolute top-5 right-5 bg-brand-turquoise text-white text-[0.65rem] font-header font-bold tracking-wider uppercase px-2.5 py-1 rounded-full z-10">Más Solicitado</span>
+                        <div class="h-[200px] overflow-hidden relative image-expand-container">
+                            <img src="assets/store-interior.jpg" alt="Interiorismo comercial y planos para el Proyecto Integral MAROZ" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+                        </div>
+                        <div class="p-8 lg:p-10 flex flex-col flex-grow">
+                            <span class="font-header text-[0.75rem] text-white bg-[#02D4D5] px-3 py-1 rounded-full font-bold tracking-widest uppercase mb-2 inline-block shadow-sm">COLECCIÓN B</span>
+                            <h3 class="text-[1.35rem] font-extrabold text-brand-charcoal mb-4">Impulsa tu Tienda</h3>
+                            <div class="h-[1px] bg-black/5 my-5"></div>
+                            <h4 class="font-header text-[0.8rem] font-bold tracking-wider uppercase text-brand-charcoal mb-4">Qué incluye:</h4>
+                            <ul class="list-none mb-10 flex-grow">
+                                <li class="text-[0.85rem] text-brand-charcoal-light mb-3 flex items-start gap-3 leading-relaxed">
+                                    <i data-lucide="check-circle-2" class="text-brand-turquoise w-4 h-4 mt-0.5 shrink-0" aria-hidden="true"></i>
+                                    <span>Planos completos</span>
+                                </li>
+                                <li class="text-[0.85rem] text-brand-charcoal-light mb-3 flex items-start gap-3 leading-relaxed">
+                                    <i data-lucide="check-circle-2" class="text-brand-turquoise w-4 h-4 mt-0.5 shrink-0" aria-hidden="true"></i>
+                                    <span>Diseño de mobiliario</span>
+                                </li>
+                                <li class="text-[0.85rem] text-brand-charcoal-light mb-3 flex items-start gap-3 leading-relaxed">
+                                    <i data-lucide="check-circle-2" class="text-brand-turquoise w-4 h-4 mt-0.5 shrink-0" aria-hidden="true"></i>
+                                    <span>Iluminación sugerida</span>
+                                </li>
+                                <li class="text-[0.85rem] text-brand-charcoal-light mb-3 flex items-start gap-3 leading-relaxed">
+                                    <i data-lucide="check-circle-2" class="text-brand-turquoise w-4 h-4 mt-0.5 shrink-0" aria-hidden="true"></i>
+                                    <span>Render/Imagenes del diseño</span>
+                                </li>
+                                <li class="text-[0.85rem] text-brand-charcoal-light mb-3 flex items-start gap-3 leading-relaxed">
+                                    <i data-lucide="check-circle-2" class="text-brand-turquoise w-4 h-4 mt-0.5 shrink-0" aria-hidden="true"></i>
+                                     <span>Branding sugerido (Logo, paleta, tipografías)</span>
+                                </li>
+                                <li class="text-[0.85rem] text-brand-charcoal-light mb-3 flex items-start gap-3 leading-relaxed">
+                                    <i data-lucide="check-circle-2" class="text-brand-turquoise w-4 h-4 mt-0.5 shrink-0" aria-hidden="true"></i>
+                                    <span>Manual del local y experiencia cliente</span>
+                                </li>
+                                <li class="text-[0.85rem] text-brand-charcoal-light mb-3 flex items-start gap-3 leading-relaxed">
+                                    <i data-lucide="check-circle-2" class="text-brand-turquoise w-4 h-4 mt-0.5 shrink-0" aria-hidden="true"></i>
+                                    <span>Landing page</span>
+                                </li>
+                            </ul>
+                            <div class="flex flex-col gap-4 mt-auto">
+                                <div class="mb-2">
+                                    <span class="text-[0.75rem] text-brand-charcoal-muted block mb-0.5">Rango de precio</span>
+                                    <div class="font-header text-[1.4rem] sm:text-[1.6rem] font-extrabold text-brand-charcoal leading-none">
+                                        $1.200.000-$3.500.000 
+                                    </div>
+                                </div>
+                                <a href="#seccion-agendamiento" class="btn btn-primary w-full" aria-label="Solicitar cotización para el Proyecto Integral MAROZ">QUIERO ESTA COLECCIÓN</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- CARD 3 -->
+                    <article class="tilt-card bg-white rounded-brand-lg overflow-hidden shadow-card border border-black/[0.03] flex flex-col transition-all duration-300 ease-smooth hover:shadow-[0_30px_60px_rgba(0,0,0,0.08)] reveal delay-300">
+                        <div class="h-[200px] overflow-hidden relative image-expand-container">
+                            <img src="assets/retail-interior.jpg" alt="Diseño de retail moderno para la solución express MAROZ Kits" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+                        </div>
+                        <div class="p-8 lg:p-10 flex flex-col flex-grow">
+                            <span class="font-header text-[0.75rem] text-white bg-[#0077E6] px-3 py-1 rounded-full font-bold tracking-widest uppercase mb-2 inline-block shadow-sm">COLECCIÓN C</span>
+                            <h3 class="text-[1.35rem] font-extrabold text-brand-charcoal mb-4">Tu local listo, experiencia completa</h3>
+                            <div class="h-[1px] bg-black/5 my-5"></div>
+                            <h4 class="font-header text-[0.8rem] font-bold tracking-wider uppercase text-brand-charcoal mb-4">Qué incluye:</h4>
+                            <ul class="list-none mb-10 flex-grow">
+                                <li class="text-[0.85rem] text-brand-charcoal-light mb-3 flex items-start gap-3 leading-relaxed">
+                                    <i data-lucide="check-circle-2" class="text-brand-turquoise w-4 h-4 mt-0.5 shrink-0" aria-hidden="true"></i>
+                                    <span>Planos completos</span>
+                                </li>
+                                <li class="text-[0.85rem] text-brand-charcoal-light mb-3 flex items-start gap-3 leading-relaxed">
+                                    <i data-lucide="check-circle-2" class="text-brand-turquoise w-4 h-4 mt-0.5 shrink-0" aria-hidden="true"></i>
+                                    <span>Detalles</span>
+                                </li>
+                                <li class="text-[0.85rem] text-brand-charcoal-light mb-3 flex items-start gap-3 leading-relaxed">
+                                    <i data-lucide="check-circle-2" class="text-brand-turquoise w-4 h-4 mt-0.5 shrink-0" aria-hidden="true"></i>
+                                    <span>EETT, especificaciones técnicas para ejecución en obra</span>
+                                </li>
+                                <li class="text-[0.85rem] text-brand-charcoal-light mb-3 flex items-start gap-3 leading-relaxed">
+                                    <i data-lucide="check-circle-2" class="text-brand-turquoise w-4 h-4 mt-0.5 shrink-0" aria-hidden="true"></i>
+                                    <span>Iluminación sugerida</span>
+                                </li>
+                                <li class="text-[0.85rem] text-brand-charcoal-light mb-3 flex items-start gap-3 leading-relaxed">
+                                    <i data-lucide="check-circle-2" class="text-brand-turquoise w-4 h-4 mt-0.5 shrink-0" aria-hidden="true"></i>
+                                     <span>Renders e Imágenes</span>
+                                </li>
+                                <li class="text-[0.85rem] text-brand-charcoal-light mb-3 flex items-start gap-3 leading-relaxed">
+                                    <i data-lucide="check-circle-2" class="text-brand-turquoise w-4 h-4 mt-0.5 shrink-0" aria-hidden="true"></i>
+                                    <span>Manual y detalles de texturas y materiales</span>
+                                </li>
+                                <li class="text-[0.85rem] text-brand-charcoal-light mb-3 flex items-start gap-3 leading-relaxed">
+                                    <i data-lucide="check-circle-2" class="text-brand-turquoise w-4 h-4 mt-0.5 shrink-0" aria-hidden="true"></i>
+                                    <span>Diseño de mobiliario (Con opción a construcción)</span>
+                                </li>
+                                <li class="text-[0.85rem] text-brand-charcoal-light mb-3 flex items-start gap-3 leading-relaxed">
+                                    <i data-lucide="check-circle-2" class="text-brand-turquoise w-4 h-4 mt-0.5 shrink-0" aria-hidden="true"></i>
+                                    <span>Branding</span>
+                                </li>
+                                <li class="text-[0.85rem] text-brand-charcoal-light mb-3 flex items-start gap-3 leading-relaxed">
+                                    <i data-lucide="check-circle-2" class="text-brand-turquoise w-4 h-4 mt-0.5 shrink-0" aria-hidden="true"></i>
+                                    <span>Manual del local y experiencia cliente</span>
+                                </li>
+                                <li class="text-[0.85rem] text-brand-charcoal-light mb-3 flex items-start gap-3 leading-relaxed">
+                                    <i data-lucide="check-circle-2" class="text-brand-turquoise w-4 h-4 mt-0.5 shrink-0" aria-hidden="true"></i>
+                                    <span>Landing page</span>
+                                </li>
+                                <li class="text-[0.85rem] text-brand-charcoal-light mb-3 flex items-start gap-3 leading-relaxed">
+                                    <i data-lucide="check-circle-2" class="text-brand-turquoise w-4 h-4 mt-0.5 shrink-0" aria-hidden="true"></i>
+                                    <span>Letrería comercial iluminada (Lightbox)</span>
+                                </li>
+                            </ul>
+                            <div class="flex flex-col gap-4 mt-auto">
+                                <div class="mb-2">
+                                    <span class="text-[0.75rem] text-brand-charcoal-muted block mb-0.5">Rango de precio</span>
+                                    <div class="font-header text-[1.6rem] font-extrabold text-brand-charcoal">Desde $3.800.000 -</div>
+                                </div>
+                                <a href="#seccion-agendamiento" class="btn btn-primary w-full" aria-label="Ver y comprar Colecciones MAROZ">QUIERO ESTA COLECCIÓN</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- ==========================================================================
+                     ADDITIONAL SERVICES & STRATEGIC SESSION
+                     ========================================================================== -->
+                <!-- Strategic Session (Full Width Centered) -->
+                <div id="seccion-agendamiento" class="mt-20 pt-16 border-t border-black/5 reveal">
+                    <div class="bg-white rounded-brand-lg p-8 lg:p-10 shadow-card border border-black/[0.03] grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] gap-8 items-center max-w-[1000px] mx-auto">
+                        <div>
+                            <span class="font-header text-[0.75rem] text-brand-turquoise font-bold tracking-widest uppercase mb-2 inline-block">Agendamiento en línea</span>
+                            <h3 class="text-[1.35rem] font-extrabold text-brand-charcoal mb-4">Ya elegiste tu colección, ahora agenda en línea</h3>
+                            <p class="text-[0.85rem] text-brand-charcoal-light leading-relaxed mb-6">Son $150.000 pesos que incluyen 2 reuniones. Agenda tu primera reunión para dar el paso inicial con tu proyecto.</p>
+                            <div class="flex flex-wrap gap-x-6 gap-y-2 text-[0.8rem] text-brand-charcoal-muted">
+                                <span class="flex flex-wrap items-center gap-1.5"><i data-lucide="video" class="w-3.5 h-3.5 text-brand-turquoise"></i> Videollamada</span>
+                                <span class="flex flex-wrap items-center gap-1.5"><i data-lucide="calendar" class="w-3.5 h-3.5 text-brand-turquoise"></i> 2 Sesiones</span>
+                            </div>
+                        </div>
+                        <div class="md:border-l md:border-black/5 md:pl-8 flex flex-col items-center justify-center relative min-h-[380px] w-full">
+                            <!-- Cal inline embed code begins -->
+                            <div style="width:100%;height:100%;min-height:380px;overflow:scroll" id="my-cal-inline-diagnostico-inical-maroz" class="rounded-xl border border-black/5 bg-brand-cream/30"></div>
+                            <script type="text/javascript">
+                              (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+                              Cal("init", "diagnostico-inical-maroz", {origin:"https://app.cal.com"});
+                              Cal.config = Cal.config || {};
+                              Cal.config.forwardQueryParams = true;
+
+                              Cal.ns["diagnostico-inical-maroz"]("inline", {
+                                elementOrSelector:"#my-cal-inline-diagnostico-inical-maroz",
+                                config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+                                calLink: "maroz-estudio/diagnostico-inical-maroz",
+                              });
+
+                              Cal.ns["diagnostico-inical-maroz"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+                            </script>
+                            <!-- Cal inline embed code ends -->
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             SERVICIOS ESPECIALIZADOS
+             ========================================================================== -->
+        <section class="py-20 md:py-24 bg-brand-cream border-t border-b border-black/5" id="servicios-especializados">
+            <div class="max-w-[1200px] mx-auto px-6">
+                <div class="text-center max-w-[700px] mx-auto mb-16 reveal">
+                    <span class="text-brand-turquoise font-header font-semibold uppercase text-[0.75rem] tracking-[0.2em] mb-3 inline-block">Soluciones a Medida</span>
+                    <h2 class="text-3xl md:text-[2.25rem] text-brand-charcoal mb-4 font-extrabold">Servicios Especializados</h2>
+                    <p class="text-base text-brand-charcoal-muted leading-relaxed">¿Solo necesitas un servicio específico? Diseñamos soluciones a medida para potenciar tu negocio.</p>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-8 reveal delay-100">
+                    <!-- Mobiliario comercial -->
+                    <div class="bg-white rounded-brand-lg overflow-hidden shadow-card border border-black/[0.03] flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-soft w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.5rem)] max-w-[360px]">
+                        <div class="h-[280px] overflow-hidden relative">
+                            <img src="assets/mobiliario-comercial.jpg" alt="Mobiliario comercial por MAROZ Estudio" class="w-full h-full object-cover object-center">
+                        </div>
+                        <div class="p-6 text-center flex-grow flex flex-col justify-between">
+                            <h3 class="text-[1.1rem] font-bold text-brand-charcoal font-header uppercase tracking-wider mb-2">Mobiliario comercial</h3>
+                            <a href="https://wa.me/56982281464?text=Hola!%20Me%20interesa%20cotizar%20el%20servicio%20de%20Mobiliario%20Comercial" target="_blank" rel="noopener" class="text-[0.8rem] font-bold text-brand-turquoise hover:underline mt-auto inline-flex items-center justify-center gap-1">Cotizar Servicio <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Letreria iluminada -->
+                    <div class="bg-white rounded-brand-lg overflow-hidden shadow-card border border-black/[0.03] flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-soft w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.5rem)] max-w-[360px]">
+                        <div class="h-[280px] overflow-hidden relative" id="letreria-carousel">
+                            <img src="assets/letreria-iluminada.jpg" alt="Letrería iluminada - Café Verdi" class="letreria-slide w-full h-full object-cover object-center absolute inset-0 transition-opacity duration-700 opacity-100">
+                            <img src="assets/letreria-2.jpg" alt="Letrería iluminada - Panel vertical Verdi" class="letreria-slide w-full h-full object-cover object-center absolute inset-0 transition-opacity duration-700 opacity-0">
+                            <img src="assets/letreria-3.jpg" alt="Letrería iluminada - Menú iluminado Verdi" class="letreria-slide w-full h-full object-cover object-center absolute inset-0 transition-opacity duration-700 opacity-0">
+                            <img src="assets/letreria-4.jpg" alt="Letrería iluminada - Señalética Café Verdi" class="letreria-slide w-full h-full object-cover object-top absolute inset-0 transition-opacity duration-700 opacity-0">
+                        </div>
+                        <div class="p-6 text-center flex-grow flex flex-col justify-between">
+                            <h3 class="text-[1.1rem] font-bold text-brand-charcoal font-header uppercase tracking-wider mb-2">Letrería iluminada</h3>
+                            <a href="https://wa.me/56982281464?text=Hola!%20Me%20interesa%20cotizar%20el%20servicio%20de%20Letrería%20Iluminada" target="_blank" rel="noopener" class="text-[0.8rem] font-bold text-brand-turquoise hover:underline mt-auto inline-flex items-center justify-center gap-1">Cotizar Servicio <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Muebles corporativos -->
+                    <div class="bg-white rounded-brand-lg overflow-hidden shadow-card border border-black/[0.03] flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-soft w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.5rem)] max-w-[360px]">
+                        <div class="h-[280px] overflow-hidden relative" id="muebles-corp-carousel">
+                            <img src="assets/muebles-corp-1.jpg" alt="Muebles corporativos - Dibujo técnico" class="muebles-slide w-full h-full object-cover object-center absolute inset-0 transition-opacity duration-700 opacity-100">
+                            <img src="assets/muebles-corp-2.jpg" alt="Muebles corporativos - Módulo base" class="muebles-slide w-full h-full object-cover object-center absolute inset-0 transition-opacity duration-700 opacity-0">
+                            <img src="assets/muebles-corp-3.jpg" alt="Muebles corporativos - Módulo Kremas" class="muebles-slide w-full h-full object-cover object-center absolute inset-0 transition-opacity duration-700 opacity-0">
+                            <img src="assets/muebles-corp-4.jpg" alt="Muebles corporativos - Módulo Matcha" class="muebles-slide w-full h-full object-cover object-center absolute inset-0 transition-opacity duration-700 opacity-0">
+                        </div>
+                        <div class="p-6 text-center flex-grow flex flex-col justify-between">
+                            <h3 class="text-[1.1rem] font-bold text-brand-charcoal font-header uppercase tracking-wider mb-2">Muebles corporativos</h3>
+                            <a href="https://wa.me/56982281464?text=Hola!%20Me%20interesa%20cotizar%20el%20servicio%20de%20Muebles%20Corporativos" target="_blank" rel="noopener" class="text-[0.8rem] font-bold text-brand-turquoise hover:underline mt-auto inline-flex items-center justify-center gap-1">Cotizar Servicio <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Tramitaciones y Regularizaciones -->
+                    <div class="bg-white rounded-brand-lg overflow-hidden shadow-card border border-black/[0.03] flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-soft w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.5rem)] max-w-[360px]">
+                        <div class="h-[280px] overflow-hidden relative">
+                            <img src="assets/tramitaciones.jpg" alt="Tramitaciones y Regularizaciones comerciales por MAROZ Estudio" class="w-full h-full object-cover object-center">
+                        </div>
+                        <div class="p-6 text-center flex-grow flex flex-col justify-between">
+                            <h3 class="text-[1.1rem] font-bold text-brand-charcoal font-header uppercase tracking-wider mb-2">Tramitaciones y Regularizaciones</h3>
+                            <a href="https://wa.me/56982281464?text=Hola!%20Me%20interesa%20cotizar%20el%20servicio%20de%20Tramitaciones%20y%20Regularizaciones" target="_blank" rel="noopener" class="text-[0.8rem] font-bold text-brand-turquoise hover:underline mt-auto inline-flex items-center justify-center gap-1">Cotizar Servicio <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Visitas a obra -->
+                    <div class="bg-white rounded-brand-lg overflow-hidden shadow-card border border-black/[0.03] flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-soft w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.5rem)] max-w-[360px]">
+                        <div class="h-[280px] overflow-hidden relative" id="visita-carousel">
+                            <img src="assets/visita-1.jpg" alt="Visitas a obra - Instalación de luces" class="visita-slide w-full h-full object-cover object-center absolute inset-0 transition-opacity duration-700 opacity-100">
+                            <img src="assets/visita-2.jpg" alt="Visitas a obra - Mostrador y remodelación" class="visita-slide w-full h-full object-cover object-center absolute inset-0 transition-opacity duration-700 opacity-0">
+                        </div>
+                        <div class="p-6 text-center flex-grow flex flex-col justify-between">
+                            <h3 class="text-[1.1rem] font-bold text-brand-charcoal font-header uppercase tracking-wider mb-2">Visitas a obra</h3>
+                            <a href="https://wa.me/56982281464?text=Hola!%20Me%20interesa%20cotizar%20el%20servicio%20de%20Visitas%20a%20Obra" target="_blank" rel="noopener" class="text-[0.8rem] font-bold text-brand-turquoise hover:underline mt-auto inline-flex items-center justify-center gap-1">Cotizar Servicio <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             QUIÉNES SOMOS
+             ========================================================================== -->
+        <section class="py-20 md:py-24 bg-white" id="quienes-somos">
+            <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div class="reveal">
+                    <span class="text-brand-turquoise font-header font-semibold uppercase text-[0.85rem] tracking-[0.15em] mb-3 inline-block">El Estudio</span>
+                    <h2 class="text-3xl md:text-[2.25rem] text-brand-charcoal mb-6 font-extrabold">Quiénes Somos</h2>
+                    <p class="text-brand-charcoal-light text-base mb-4 leading-relaxed">
+                        MAROZ es un estudio fundado y liderado por mujeres arquitectas apasionadas por el poder transformador del diseño en los negocios físicos.
+                    </p>
+                    <p class="text-brand-charcoal-muted text-[0.95rem] mb-8 leading-relaxed">
+                        Creemos que la arquitectura comercial no debe ser solo estética; debe ser una herramienta estratégica de ventas. Combinamos la distribución espacial, la experiencia del usuario y la identidad de marca para crear tiendas y locales memorables, eficientes y altamente rentables.
+                    </p>
+                    
+                    <!-- Stats Grid -->
+                    <div class="grid grid-cols-3 gap-4 border-t border-black/5 pt-8">
+                        <div>
+                            <div class="font-header text-3xl font-extrabold text-brand-charcoal mb-1">100%</div>
+                            <div class="text-[0.7rem] text-brand-charcoal-muted font-semibold uppercase tracking-wider leading-tight">Diseño Comercial</div>
+                        </div>
+                        <div>
+                            <div class="font-header text-3xl font-extrabold text-brand-charcoal mb-1">3</div>
+                            <div class="text-[0.7rem] text-brand-charcoal-muted font-semibold uppercase tracking-wider leading-tight">Etapas Claras</div>
+                        </div>
+                        <div>
+                            <div class="font-header text-3xl font-extrabold text-brand-charcoal mb-1">∞</div>
+                            <div class="text-[0.7rem] text-brand-charcoal-muted font-semibold uppercase tracking-wider leading-tight">Pasión Comercial</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative h-[380px] md:h-[450px] w-full rounded-brand-lg overflow-hidden shadow-card border border-black/[0.03] reveal delay-200">
+                    <img src="assets/quienes-somos.jpg" alt="Las fundadoras de MAROZ Estudio trabajando con planos y materiales" class="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-102">
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             HYBRID CONTACT BANNER
+             ========================================================================== -->
+        <section class="py-20 md:py-24 bg-white pb-0" id="contacto">
+            <div class="max-w-[1200px] mx-auto px-6 reveal">
+                <div class="bg-brand-cream rounded-brand-lg p-8 sm:p-10 lg:p-16 grid grid-cols-1 lg:grid-cols-[1.25fr_0.75fr] gap-10 lg:gap-12 items-center relative overflow-hidden shadow-card border border-black/[0.02]">
+                    <!-- Diagonal decor element -->
+                    <div class="hidden lg:block absolute top-0 right-0 w-[350px] h-full bg-brand-turquoise/8 z-0 opacity-50" style="clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);"></div>
+                    
+                    <div class="relative z-10">
+                        <h3 class="text-2xl lg:text-[1.85rem] font-extrabold text-brand-charcoal mb-4 leading-snug">¿Te enamoraste de una Colección MAROZ pero necesitas adaptarla a tu local?</h3>
+                        <p class="text-sm lg:text-[0.95rem] text-brand-charcoal-light leading-relaxed">Si te gustó una colección pero quieres adaptarla a tus necesidades específicas, solicita nuestro acompañamiento personalizado. Te escuchamos.</p>
+                    </div>
+                    <div class="relative z-10 text-center lg:text-right">
+                        <a href="https://wa.me/56982281464?text=Hola,%20me%20gustaría%20solicitar%20la%20adaptación%20a%20medida%20de%20una%20Colección%20MAROZ" target="_blank" rel="noopener" class="btn btn-primary shadow-[0_10px_25px_rgba(2,212,213,0.15)] inline-flex" aria-label="Solicitar adaptación de colección a medida por WhatsApp">
+                            <i data-lucide="mail" class="mr-2 w-[18px] h-[18px]"></i>
+                            Solicitar Modificación a Medida
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Banner 2: Asesoría -->
+                <div class="bg-brand-cream rounded-brand-lg p-8 sm:p-10 lg:p-16 grid grid-cols-1 lg:grid-cols-[1.25fr_0.75fr] gap-10 lg:gap-12 items-center relative overflow-hidden shadow-card border border-black/[0.02] mt-8">
+                    <!-- Diagonal decor element -->
+                    <div class="hidden lg:block absolute top-0 right-0 w-[350px] h-full bg-brand-turquoise/8 z-0 opacity-50" style="clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);"></div>
+                    
+                    <div class="relative z-10">
+                        <h3 class="text-2xl lg:text-[1.85rem] font-extrabold text-brand-charcoal mb-4 leading-snug">¿Buscas una Asesoría? Te orientamos.</h3>
+                        <p class="text-sm lg:text-[0.95rem] text-brand-charcoal-light leading-relaxed">Nuestras asesorías son de 1 hora por $70.000 pesos.</p>
+                    </div>
+                    <div class="relative z-10 text-center lg:text-right">
+                        <a href="https://wa.me/56982281464?text=Hola!%20Me%20interesa%20agendar%20una%20asesoría%20de%201%20hora" target="_blank" rel="noopener" class="btn btn-primary shadow-[0_10px_25px_rgba(2,212,213,0.15)] inline-flex" aria-label="Agendar asesoría por WhatsApp">
+                            <i data-lucide="calendar" class="mr-2 w-[18px] h-[18px]"></i>
+                            Quiero una Asesoría
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==========================================================================
+         FOOTER
+         ========================================================================== -->
+    <footer class="bg-brand-charcoal text-white mt-20 md:mt-24">
+        <!-- Footer CTA Bar -->
+        <div class="bg-brand-charcoal-light border-b border-white/5 py-12">
+            <div class="max-w-[1200px] mx-auto px-6 flex flex-col items-center justify-center gap-6 text-center">
+                <div class="text-white font-header font-extrabold text-2xl lg:text-3xl tracking-tight">¿Listo para transformar tu local en tu <span class="text-brand-turquoise">mejor vendedor</span>?</div>
+                <a href="https://wa.me/56982281464?text=Hola!%20Quiero%20agendar%20un%20diagnóstico%20con%20MAROZ%20Estudio" target="_blank" rel="noopener" class="btn btn-primary shadow-[0_10px_25px_rgba(2,212,213,0.15)] inline-flex px-8 py-3 text-[1rem]" aria-label="Iniciar conversación por WhatsApp para agendar diagnóstico">
+                    <i data-lucide="message-circle" class="mr-2 w-5 h-5"></i>
+                    Hablemos por WhatsApp
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer Main -->
+        <div class="pt-20 pb-10">
+            <div class="max-w-[1200px] mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr] gap-12 lg:gap-16 mb-16">
+                    <div>
+                        <div class="flex items-center gap-3 mb-5">
+                            <img src="assets/logo.svg" alt="MAROZ Estudio Logo" class="h-24 md:h-[110px] w-auto object-contain invert">
+                        </div>
+                        <p class="text-[0.85rem] text-brand-charcoal-muted leading-relaxed max-w-[300px]">Diseño estratégico comercial que une arquitectura, branding y experiencia espacial para negocios reales y rentables.</p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-white text-[0.85rem] font-bold tracking-widest uppercase mb-6">Estudio</h4>
+                        <ul class="list-none flex flex-col gap-3">
+                            <li><a href="#que-hacemos" class="text-[0.85rem] text-brand-charcoal-muted transition-all duration-300 hover:text-brand-turquoise hover:translate-x-1" aria-label="Qué hacemos">Qué hacemos</a></li>
+                            <li><a href="#proceso" class="text-[0.85rem] text-brand-charcoal-muted transition-all duration-300 hover:text-brand-turquoise hover:translate-x-1" aria-label="Conocer el proceso de trabajo">Proceso</a></li>
+                            <li><a href="#colecciones" class="text-[0.85rem] text-brand-charcoal-muted transition-all duration-300 hover:text-brand-turquoise hover:translate-x-1" aria-label="Ver nuestras Colecciones">Colecciones</a></li>
+                            <li><a href="#quienes-somos" class="text-[0.85rem] text-brand-charcoal-muted transition-all duration-300 hover:text-brand-turquoise hover:translate-x-1" aria-label="Quiénes somos">Quiénes somos</a></li>
+                            <li><a href="#contacto" class="text-[0.85rem] text-brand-charcoal-muted transition-all duration-300 hover:text-brand-turquoise hover:translate-x-1" aria-label="Ir al formulario de contacto">Contacto</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-white text-[0.85rem] font-bold tracking-widest uppercase mb-6">Contacto & Redes</h4>
+                        <div class="text-[0.85rem] text-brand-charcoal-muted flex flex-col gap-4">
+                            <p class="flex items-center gap-3"><i data-lucide="map-pin" class="text-brand-turquoise w-4 h-4 shrink-0" aria-hidden="true"></i> Santiago, Chile</p>
+                            <p class="flex items-center gap-3"><i data-lucide="mail" class="text-brand-turquoise w-4 h-4 shrink-0" aria-hidden="true"></i> hola@marozestudio.cl</p>
+                        </div>
+                        <div class="flex gap-4 mt-6">
+                            <a href="https://www.instagram.com/marozestudio/" target="_blank" rel="noopener" class="w-[38px] h-[38px] rounded-full bg-brand-charcoal-light text-white flex items-center justify-center text-[0.95rem] transition-all duration-300 border border-white/5 hover:bg-brand-turquoise hover:-translate-y-0.5" aria-label="Sígannos en Instagram">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/maroz-estudio" target="_blank" rel="noopener" class="w-[38px] h-[38px] rounded-full bg-brand-charcoal-light text-white flex items-center justify-center text-[0.95rem] transition-all duration-300 border border-white/5 hover:bg-brand-turquoise hover:-translate-y-0.5" aria-label="Sígannos en LinkedIn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t border-white/5 pt-10 flex flex-col sm:flex-row justify-between items-center gap-5 text-[0.8rem] text-brand-charcoal-muted">
+                    <p>MAROZ © 2026 | Arquitectura · Branding · Estrategia. Todos los derechos reservados. Diseñado por Maroz Estudio</p>
+                    <p>Diseñado con estrategia para negocios reales.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Success Modal -->
+    <div id="booking-success-modal" class="fixed inset-0 z-[100000] flex items-center justify-center opacity-0 pointer-events-none transition-all duration-500 bg-brand-charcoal/40 backdrop-blur-sm">
+        <div class="bg-white rounded-brand-lg p-8 max-w-[500px] w-full mx-4 shadow-2xl border border-black/[0.03] relative transform scale-95 transition-all duration-500" id="booking-success-content">
+            <button id="close-booking-modal" class="absolute top-4 right-4 text-brand-charcoal-muted hover:text-brand-charcoal cursor-pointer">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <div class="text-center">
+                <div class="w-16 h-16 bg-brand-turquoise/10 text-brand-turquoise rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i data-lucide="check-circle" class="w-10 h-10"></i>
+                </div>
+                <h3 class="font-header text-xl lg:text-2xl font-extrabold text-brand-charcoal mb-4">¡Reserva Recibida!</h3>
+                <p class="text-[0.95rem] text-brand-charcoal-light leading-relaxed mb-6">
+                    Para hacer efectiva tu reserva, recuerda realizar la transferencia de **$150.000 CLP** y enviar el comprobante de tu transferencia al correo:
+                    <br><strong class="text-brand-turquoise font-semibold block mt-2 text-base">hola@marozestudio.cl</strong>
+                </p>
+                <div class="bg-brand-cream/50 rounded-brand p-4 text-left text-[0.8rem] text-brand-charcoal-light mb-6 border border-black/[0.02]">
+                    <p class="font-bold mb-2">Datos de Transferencia:</p>
+                    <p><strong>Banco:</strong> Banco de Chile</p>
+                    <p><strong>Tipo de Cuenta:</strong> Cuenta Vista</p>
+                    <p><strong>Titular:</strong> Paula Cabezas Marin</p>
+                    <p><strong>RUT:</strong> 17.148.389-1</p>
+                    <p><strong>N° de Cuenta:</strong> 00-031-68212-29</p>
+                    <p><strong>Correo:</strong> hola@marozestudio.cl</p>
+                </div>
+                <button id="confirm-booking-modal" class="btn btn-primary w-full">Entendido</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
+
+
+
