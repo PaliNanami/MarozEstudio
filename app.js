@@ -507,3 +507,78 @@ if (document.readyState === 'loading') {
         initModalTriggers();
     }
 })();
+
+// ==========================================================================
+// MAMPARAS METÁLICAS MINI CAROUSEL
+// Auto-rotates 2 images with a fade effect every 3 seconds
+// ==========================================================================
+(function() {
+    function initMamparaCarousel() {
+        const slides = document.querySelectorAll('.mampara-slide');
+        if (slides.length < 2) return;
+        
+        let current = 0;
+        
+        setInterval(() => {
+            slides[current].style.opacity = '0';
+            current = (current + 1) % slides.length;
+            slides[current].style.opacity = '1';
+        }, 3000);
+    }
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMamparaCarousel);
+    } else {
+        initMamparaCarousel();
+    }
+})();
+
+// ==========================================================================
+// MAROZ LAB MINI CAROUSEL
+// Auto-rotates 5 images with a fade effect every 3 seconds
+// ==========================================================================
+(function() {
+    function initLabCarousel() {
+        const slides = document.querySelectorAll('.lab-slide');
+        if (slides.length < 2) return;
+        
+        let current = 0;
+        
+        setInterval(() => {
+            slides[current].style.opacity = '0';
+            current = (current + 1) % slides.length;
+            slides[current].style.opacity = '1';
+        }, 3000);
+    }
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initLabCarousel);
+    } else {
+        initLabCarousel();
+    }
+})();
+
+// ==========================================================================
+// QUIÉNES SOMOS MINI CAROUSEL
+// Auto-rotates 2 images with a fade effect every 3 seconds
+// ==========================================================================
+(function() {
+    function initQuienesCarousel() {
+        const slides = document.querySelectorAll('.quienes-slide');
+        if (slides.length < 2) return;
+        
+        let current = 0;
+        
+        setInterval(() => {
+            slides[current].style.opacity = '0';
+            current = (current + 1) % slides.length;
+            slides[current].style.opacity = '1';
+        }, 3000);
+    }
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initQuienesCarousel);
+    } else {
+        initQuienesCarousel();
+    }
+})();
