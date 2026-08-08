@@ -582,3 +582,65 @@ if (document.readyState === 'loading') {
         initQuienesCarousel();
     }
 })();
+
+// ==========================================================================
+// WHATSAPP OPTIONS MODAL TRIGGER
+// Intercepts all clicks on the old WhatsApp number and provides two contact options
+// ==========================================================================
+(function() {
+    const modal = document.getElementById('whatsapp-modal');
+    const content = document.getElementById('whatsapp-modal-content');
+    const link1 = document.getElementById('whatsapp-link-1');
+    const link2 = document.getElementById('whatsapp-link-2');
+    const closeBtn = document.getElementById('close-whatsapp-modal');
+    
+    if (!modal || !content || !link1 || !link2) return;
+
+    function showWhatsappModal(textParam) {
+        const decodedText = textParam ? decodeURIComponent(textParam) : '';
+        const encodedText = decodedText ? `?text=${encodeURIComponent(decodedText)}` : '';
+        link1.href = `https://wa.me/56957728882${encodedText}`;
+        link2.href = `https://wa.me/56942877216${encodedText}`;
+        
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+        content.classList.remove('scale-95');
+    }
+
+    function hideWhatsappModal() {
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        content.classList.add('scale-95');
+    }
+
+    // Intercept clicks on all links going to the old WhatsApp number
+    document.addEventListener('click', function(e) {
+        const anchor = e.target.closest('a');
+        if (anchor && anchor.href && anchor.href.includes('wa.me/56982281464')) {
+            e.preventDefault();
+            
+            // Extract the query text parameter
+            let textParam = '';
+            try {
+                const url = new URL(anchor.href);
+                textParam = url.searchParams.get('text') || '';
+            } catch (err) {
+                const match = anchor.href.match(/[?&]text=([^&#]*)/);
+                if (match) {
+                    textParam = match[1];
+                }
+            }
+            
+            showWhatsappModal(textParam);
+        }
+    });
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', hideWhatsappModal);
+    }
+    
+    // Close modal when clicking outside content
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            hideWhatsappModal();
+        }
+    });
+})();
